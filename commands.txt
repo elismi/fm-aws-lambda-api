@@ -1,0 +1,5 @@
+.\env\scripts\activate.bat
+sam build --use-container
+sam local start-api
+sam deploy -g
+aws cloudformation delete-stack --stack-name fm-aws-lambda-api
